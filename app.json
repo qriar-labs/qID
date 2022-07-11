@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "verifyid",
+    "slug": "verifyid",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
