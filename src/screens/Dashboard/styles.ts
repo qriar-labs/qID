@@ -17,12 +17,13 @@ export const Header = styled.View`
 
     background-color: ${({ theme }) => theme.colors.primary};
 
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
 `;
 
 export const UserWrapper = styled.View`
-    width: 100%;
+    
     
     padding: 0 24px;
     margin-top: ${Platform.OS === 'ios' ? getStatusBarHeight() + RFValue(28) : RFValue(28)}px;
@@ -67,9 +68,18 @@ export const Icon = styled(Feather)`
 `;
 
 export const ScoreWrapper = styled.View`
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: ${({ theme }) => theme.colors.success_light};
+
+    border-radius: 10px;
+    
+    padding: 20px 2px 20px;
+
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 16px;
     
 `;
 export const ScoreText = styled.Text`
@@ -78,7 +88,6 @@ export const ScoreText = styled.Text`
     color: ${({ theme }) => theme.colors.text_dark};
 `;
 export const ScoreBox = styled.View`
-    background-color: ${({ theme }) => theme.colors.success_light};
     padding: 5px;
     margin-left: 4px;
     margin-top: 2px;
@@ -93,7 +102,7 @@ export const IncrementButton = styled.Text`
     padding: 10px 2px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 8px;
+    margin-top: 16px;
     border-radius: 100px;
 
 
@@ -111,5 +120,5 @@ export const HighlightCards = styled.ScrollView.attrs({
     contentContainerStyle: { paddingHorizontal: 24 }
 })`
     width: 100%;
-    margin-top: ${RFPercentage(4)}px;
+    margin-top: ${RFPercentage(2)}px;
 `;

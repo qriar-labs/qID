@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RouterProps } from "../../../App";
 import { ProfileButton } from "../../components/ProfileButton";
 import { 
@@ -15,6 +15,18 @@ import {
 
 
 export function Login({navigation}: RouterProps) {
+    
+    useEffect(() => {
+        navigation.getParent()?.setOptions({
+          tabBarStyle: {
+            display: "none"
+          }
+        });
+        return () => navigation.getParent()?.setOptions({
+          tabBarStyle: undefined
+        });
+      }, [navigation]);
+      
     return (
         <Container>
             <Header>

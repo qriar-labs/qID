@@ -62,6 +62,7 @@ export function CredentialForm({navigation}: RouterProps) {
             .then(json => console.log(json))
             .catch((error) => {console.log(error)})
 
+        navigation.navigate('VerifyIdentity');
     }
 
     return (

@@ -36,31 +36,33 @@ export function Dashboard({navigation}: RouterProps) {
                         </User>
                     </UserInfo>
 
-                    <SettingsButton onPress={async () => navigation.navigate('Home')}>
+                    {/* <SettingsButton onPress={async () => navigation.navigate('Home')}>
                         <Icon name="settings" />
-                    </SettingsButton>
+                    </SettingsButton> */}
                 </UserWrapper>
                 
             </Header>
             
+
+            
+            <IncrementButton
+                onPress={async () => navigation.navigate('Increment')}
+                > Incrementar identidade </IncrementButton>
+
             <ScoreWrapper>
-                <ScoreText>Seu score atual:</ScoreText>
+                <ScoreText>Seu score atual</ScoreText>
                 <ScoreBox>
                     <ScoreNumber>100</ScoreNumber>
                 </ScoreBox>
             </ScoreWrapper>
 
-            <IncrementButton
-                onPress={async () => navigation.navigate('Increment')}
-            > Incrementar identidade </IncrementButton>
-
             <HighlightCards>
-                <HighlightCard 
+                {/* <HighlightCard 
                     title="Minhas credenciais" 
                     type="verify"
                     onPress={async () => navigation.navigate('VerifyIdentity')}
                     
-                />
+                /> */}
 
                 <HighlightCard 
                     title="Apresentar identidade" 
