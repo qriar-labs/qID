@@ -15,7 +15,7 @@ import {
 
 
 
-export function Login({navigation}: RouterProps) {
+export function AccountForm({navigation}: RouterProps) {
     
     // useEffect(() => {
     //     navigation.getParent()?.setOptions({
@@ -31,34 +31,32 @@ export function Login({navigation}: RouterProps) {
     return (
         <Container>
             <Header>
-                <Title> LOGO Verify ID</Title>
-                <Title> Your ID in your hands</Title>
-                <Title> Anywhere. Everywhere</Title>
+                <Title> Insira abaixo para validação</Title>
             </Header>
 
 
             <FormWrapper>
 
+                
+            <LoginInput 
+                    placeholder="Nome completo"
+
+                />
+
                 <LoginInput 
-                    placeholder="Username"
+                    placeholder="Telefone"
 
                 />
                 <PwdInput 
-                    placeholder="Password"
+                    placeholder="Email"
                 />
                 <ProfileButton 
-                    title="Login"
-                    onPress={async () => navigation.navigate('Home')}    
+                    title="Validar"
+                    onPress={async () => navigation.navigate('Increment')}    
                 />
 
             </FormWrapper>
 
-            <NewAccountWrapper>
-                <Subtitle>Não tem uma conta?</Subtitle>
-                <Link
-                    onPress={async () => navigation.navigate('AccountForm')}  
-                >Cadastre-se</Link>
-            </NewAccountWrapper>
 
 
         </Container>

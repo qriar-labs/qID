@@ -57,12 +57,6 @@ export function Dashboard({navigation}: RouterProps) {
             </ScoreWrapper>
 
             <HighlightCards>
-                {/* <HighlightCard 
-                    title="Minhas credenciais" 
-                    type="verify"
-                    onPress={async () => navigation.navigate('VerifyIdentity')}
-                    
-                /> */}
 
                 <HighlightCard 
                     title="Apresentar identidade" 

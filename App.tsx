@@ -30,6 +30,7 @@ import { VerifyIdentity } from './src/screens/VerifyIdentity';
 import { CredentialForm } from './src/components/CredentialForm';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AppRoutes } from './src/routes/app.routes';
+import { AccountForm } from './src/screens/AccountForm';
 
 export interface RouterProps {
     navigation: NavigationProp<any, any>;
@@ -59,12 +60,7 @@ export default function App() {
         {/* <AppRoutes /> */}
         <Stack.Navigator screenOptions={{ headerShown: false }}>      
               <Stack.Screen name="BottomTab" component={AppRoutes} />
-              <Stack.Screen name="Login" component={Login} options={() => ({
-      tabBarStyle: {
-        display: "none",
-      },
-      tabBarButton: () => null,
-    })}/>
+              <Stack.Screen name="Login" component={Login} />
               <Stack.Screen name="Home" component={Dashboard} /> 
               <Stack.Screen name="ManageProfile" component={ManageProfile} />
               <Stack.Screen name="Profile" component={ProfileData} />
@@ -74,6 +70,7 @@ export default function App() {
               <Stack.Screen name="FakeQRCode" component={FakeQRCode} />
               <Stack.Screen name="VerifyIdentity" component={VerifyIdentity} />
               <Stack.Screen name="CredentialForm" component={CredentialForm} />
+              <Stack.Screen name="AccountForm" component={AccountForm} />
       </Stack.Navigator>    
       </NavigationContainer>
     </ThemeProvider>
